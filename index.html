@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Neural Puppeteer: Keypoint-Based Neural Rendering of Dynamic Shapes</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="html/c.css">
+
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Neural Puppeteer:</br>
+                <small class="h2">Keypoint-Based Neural Rendering of Dynamic Shapes</small></br>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                ACCV 2022
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Additional Results: Novel Pose and View Synthesis 
+                </h3>
+                <p>
+                Our network was trained only on individual poses. We apply our rendering pipeline to keypoints from motion captured data from the <a href="https://amass.is.tue.mpg.de/" target="_blank">AMASS dataset</a>.
+                </p>
+                <video id="v0" width="100%" autoplay loop muted controls>
+                  <source src="videos/human_animation/animation_macarena.mp4" type="video/mp4" />
+                </video>
+
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/human_animation/animation_sit.mp4" type="video/mp4" />
+                </video>
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/human_animation/animation_cross_legged.mp4" type="video/mp4" />
+                </video>
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/human_animation/animation_walk1.mp4" type="video/mp4" />
+                </video>
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/human_animation/animation_walk2.mp4" type="video/mp4" />
+                </video>
+                <br/><br/><br/><br/><br/>
+                <p>
+                One failure case comes up if the animation is far from the trained poses, as is the case with this crawling animation. There are problems with the mask in occluded areas as well as artifacts towards the edge of the reconstruction region.
+                </p>
+                <video id="v0" width="100%" autoplay loop muted controls>
+                  <source src="videos/human_animation/animation_crawl_failure.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Additional Results: Latent Space Interpolation 
+                </h3>
+                <p>
+                Each video shows the linear interpolation between different pose encodings from the test set.
+                </p>
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/interpolation/interpolation_human.mp4" type="video/mp4" />
+                </video>
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/interpolation/interpolation_giraffe.mp4" type="video/mp4" />
+                </video>
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/interpolation/interpolation_pigeon.mp4" type="video/mp4" />
+                </video>
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/interpolation/interpolation_cow.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Additional Results: View Consistency
+                </h3>
+                <p>
+                Each video shows a single pose rendererd from a camera circling around the subjects at different heights.
+                </p>
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/novel_views/novel_views_human_1.mp4" type="video/mp4" />
+                </video>
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/novel_views/novel_views_human_2.mp4" type="video/mp4" />
+                </video>
+
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/novel_views/novel_views_giraffe_1.mp4" type="video/mp4" />
+                </video>
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/novel_views/novel_views_giraffe_2.mp4" type="video/mp4" />
+                </video>
+
+                <video id="v0" width="33%" autoplay loop muted controls>
+                  <source src="videos/novel_views/novel_views_pigeon_1.mp4" type="video/mp4" />
+                </video>
+                <video id="v0" width="33%" autoplay loop muted controls>
+                  <source src="videos/novel_views/novel_views_pigeon_2.mp4" type="video/mp4" />
+                </video>
+                <video id="v0" width="33%" autoplay loop muted controls>
+                  <source src="videos/novel_views/novel_views_pigeon_3.mp4" type="video/mp4" />
+                </video>
+
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/novel_views/novel_views_cow_1.mp4" type="video/mp4" />
+                </video>
+                <video id="v0" width="49%" autoplay loop muted controls>
+                  <source src="videos/novel_views/novel_views_cow_2.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Additional Results: Real World
+                </h3>
+                <p>
+                The animation shows the process of pose optimization from the initalization to the final pose given the silhouette.
+                </p>
+                <video id="v0" width="100%" autoplay loop muted controls>
+                  <source src="videos/real_world_animation.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
+
