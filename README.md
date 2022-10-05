@@ -1,16 +1,15 @@
 # Neural Puppeteer (NePU)
 Official Code Release for the ACCV'22 paper "Neural Puppeteer: Keypoint-Based Neural Rendering of Dynamic Shapes"
 
-[Paper](todo-insert-link) | [Supplementary](todo-insert-link) | [Data](todo-insert-link)
+[Project Page](https://urs-waldmann.github.io/NePu/) | [Paper](todo-insert-link) | [Supplementary](todo-insert-link) | [Data](todo-insert-link)
 
 TODO teaser GIF
 
 # Install
 
-All experiments with NePu were run using CUDA version 11.6 and the official pytorch docker image `nvcr.io/nvidia/pytorch:22.02-py3`, as published by nvidia [here](https://ngc.nvidia.com/catalog/containers/nvidia:pytorch).
-However, as the model is solely based on simple, common mechanisms, older CUDA and pytorch versions should also work.
+All experiments with NePu were run using CUDA version 11.6 and the official pytorch docker image `nvcr.io/nvidia/pytorch:22.02-py3`, as published by nvidia [here](https://ngc.nvidia.com/catalog/containers/nvidia:pytorch). Additionally, you will need to install the ``ìmageio```library.
 
-TODO: Alternatively, we provide the `nepu_env.yaml` file that holds all python requirements for this project. To conveniently install them automatically with anaconda you can use:
+Alternatively, we provide the `nepu_env.yaml` file that holds all python requirements for this project. To conveniently install them automatically with anaconda you can use:
 ```
 conda env create -f nepu_env.yml
 conda activate nepu
@@ -18,10 +17,6 @@ conda activate nepu
 
 
 # Datasets
-
-TODO
-
-# Demo
 
 TODO
 
