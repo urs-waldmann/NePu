@@ -7,7 +7,7 @@ TODO teaser GIF
 
 # Install
 
-All experiments with NePu were run using CUDA version 11.6 and the official pytorch docker image `nvcr.io/nvidia/pytorch:22.02-py3`, as published by nvidia [here](https://ngc.nvidia.com/catalog/containers/nvidia:pytorch). Additionally, you will need to install the ``ìmageio```library.
+All experiments with NePu were run using CUDA version 11.6 and the official pytorch docker image `nvcr.io/nvidia/pytorch:22.02-py3`, as published by nvidia [here](https://ngc.nvidia.com/catalog/containers/nvidia:pytorch). Additionally, you will need to install the ```imageio```library.
 
 Alternatively, we provide the `nepu_env.yaml` file that holds all python requirements for this project. To conveniently install them automatically with anaconda you can use:
 ```
