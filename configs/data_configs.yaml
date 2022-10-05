@@ -1,0 +1,20 @@
+nkps:
+  humans: 33
+  pigeons: 19
+  cows: 25
+  giraffes: 26
+ncams:
+  humans: 24
+  pigeons: 56
+  cows: 24
+  giraffes: 24
+radii:
+  pigeons: 0.175,
+  humans: 1.125,
+  cows: 1.5,
+  giraffes: 3.0
+num_datapoints:
+  pigeons: 1450,
+  cows: 910,
+  giraffes: 1900,
+  humans: 3213

@@ -1,0 +1,26 @@
+renderer:
+  decoder_attn_dim: 256
+  decoder_hidden_dim: 256
+  decoder_nblocks: 5
+  decoder_nneigh: 12
+  type: nepu
+encoder:
+  encoder_attn_dim: 256
+  kps_bottle: 128
+  lat_dim: 1024
+  loc_lat_dim: 256
+  nfinal_trans: 3
+  type: nepu
+training:
+  L: -1
+  batch_size: 42
+  ckpt: null
+  grad_clip: 1.0
+  is_ANP: false
+  lr: 0.0005
+  lr_decay_factor: 0.2
+  lr_decay_interval: 500
+  npoints_decoder: 1500
+  pc_samples: 300
+
+
