@@ -1,162 +1,254 @@
 <!DOCTYPE html>
 <html>
-
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <title>Neural Puppeteer: Keypoint-Based Neural Rendering of Dynamic Shapes</title>
-
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="html/c.css">
-
-</head>
-
-<body>
-    <div class="container" id="main">
-        <div class="row">
-            <h1 class="col-md-12 text-center">
-                Neural Puppeteer:</br>
-                <small class="h2">Keypoint-Based Neural Rendering of Dynamic Shapes</small></br>
-            </h1>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                ACCV 2022
-            </div>
-        </div>
-
-        <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center">
-                    <ul class="nav nav-pills nav-justified">
-                        <li>
-                            <a href="https://github.com/urs-waldmann/NePu/" target="_blank">
-                            <image src="imgs/GitHub-Mark-120px-plus.png" height="120px"><br>
-                                <h4><strong>Code</strong></h4>
-                            </a>
-                        </li>
-                    </ul>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="author" content="Urs Waldmann">
+        <meta name="description" content="Project page for 'Neural Puppeteer: Keypoint-Based Neural Rendering of Dynamic Shapes' (ACCV 2022)">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Neural Puppeteer: Keypoint-Based Neural Rendering of Dynamic Shapes</title>
+        <link rel="stylesheet" href="html/c.css">
+    </head>
+    <body>
+        <!-- header -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <h1 class="col-md-12 text-center">
+                        <b>Neural Puppeteer</b>:
+                        <br>
+                        <small class="h2">
+                            Keypoint-Based Neural Rendering of Dynamic Shapes
+                        </small>
+                        <br>
+                        <small class="h4">
+                            <a href="https://accv2022.org/en/" target="_blank">ACCV 2022</a>
+                        </small>
+                    </h1>
                 </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Additional Results: Novel Pose and View Synthesis 
-                </h3>
-                <p>
-                Our network was trained only on individual poses. We apply our rendering pipeline to keypoints from motion captured data from the <a href="https://amass.is.tue.mpg.de/" target="_blank">AMASS dataset</a>.
-                </p>
-                <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="videos/human_animation/animation_macarena.mp4" type="video/mp4" />
-                </video>
-
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/human_animation/animation_sit.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/human_animation/animation_cross_legged.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/human_animation/animation_walk1.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/human_animation/animation_walk2.mp4" type="video/mp4" />
-                </video>
-                <br/><br/><br/><br/><br/>
-                <p>
-                One failure case comes up if the animation is far from the trained poses, as is the case with this crawling animation. There are problems with the mask in occluded areas as well as artifacts towards the edge of the reconstruction region.
-                </p>
-                <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="videos/human_animation/animation_crawl_failure.mp4" type="video/mp4" />
-                </video>
+                <hr style="margin-top:0px">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        Simon Giebenhain<sup>*</sup>, <a href="mailto:urs.waldmann@uni-konstanz.de">Urs Waldmann</a><sup>*</sup>, Ole Johannsen, and Bastian Goldluecke
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        University of Konstanz, Germany
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <sup>*</sup> <i>Authors contributed equally.</i>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-2 text-center">
+                        <ul class="nav nav-pills nav-justified">
+                            <li>
+                                <a href="docs/nepu_paper.pdf" target="_blank">
+                                <image src="imgs/paper.png" height="120px"><br>
+                                    <h4><strong>Paper</strong></h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <ul class="nav nav-pills nav-justified">
+                            <li>
+                                <a href="docs/nepu_supp.pdf" target="_blank">
+                                <image src="imgs/supp.png" height="120px"><br>
+                                    <h4><strong>Supplementary</strong></h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <ul class="nav nav-pills nav-justified">
+                            <li>
+                                <a href="https://github.com/urs-waldmann/NePu/" target="_blank">
+                                <image src="imgs/GitHub-Mark-120px-plus.png" height="120px"><br>
+                                    <h4><strong>Code</strong></h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <ul class="nav nav-pills nav-justified">
+                            <li>
+                                <a href="https://zenodo.org/record/7149178" target="_blank">
+                                <image src="imgs/server.png" height="120px"><br>
+                                    <h4><strong>Dataset</strong></h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Additional Results: Latent Space Interpolation 
-                </h3>
-                <p>
-                Each video shows the linear interpolation between different pose encodings from the test set.
-                </p>
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/interpolation/interpolation_human.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/interpolation/interpolation_giraffe.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/interpolation/interpolation_pigeon.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/interpolation/interpolation_cow.mp4" type="video/mp4" />
-                </video>
+        </section>
+        <!-- abstract -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <h3 class="col-md-12 text-center">
+                        <b>Abstract</b>
+                    </h3>
+                </div>
+                <hr style="margin-top:0px">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <img src="imgs/nepu.png" alt="NePu Framework" style="width:100%">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 text-left">
+                    We introduce Neural Puppeteer, an efficient neural rendering pipeline for articulated shapes. By inverse rendering, we can predict 3D keypoints from multi-view 2D silhouettes alone, without requiring texture information. Furthermore, we can easily predict 3D keypoints of the same class of shapes with one and the same trained model and generalize more easily from training with synthetic data which we demonstrate by successfully applying zero-shot synthetic to real-world experiments. We demonstrate the flexibility of our method by fitting models to synthetic videos of different animals and a human, and achieve quantitative results which outperform our baselines. Our method uses 3D keypoints in conjunction with individual local feature vectors and a global latent code to allow for an efficient representation of time-varying and articulated shapes such as humans and animals. In contrast to previous work, we do not perform reconstruction in the 3D domain, but project the 3D features into 2D cameras and perform reconstruction of 2D RGB-D images from these projected features, which is significantly faster than volumetric rendering. Our synthetic dataset will be publicly available, to further develop the evolving field of animal pose and shape reconstruction.
+                    </div>
+                </div>
             </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Additional Results: View Consistency
-                </h3>
-                <p>
-                Each video shows a single pose rendererd from a camera circling around the subjects at different heights.
-                </p>
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/novel_views/novel_views_human_1.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/novel_views/novel_views_human_2.mp4" type="video/mp4" />
-                </video>
-
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/novel_views/novel_views_giraffe_1.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/novel_views/novel_views_giraffe_2.mp4" type="video/mp4" />
-                </video>
-
-                <video id="v0" width="33%" autoplay loop muted controls>
-                  <source src="videos/novel_views/novel_views_pigeon_1.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="33%" autoplay loop muted controls>
-                  <source src="videos/novel_views/novel_views_pigeon_2.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="33%" autoplay loop muted controls>
-                  <source src="videos/novel_views/novel_views_pigeon_3.mp4" type="video/mp4" />
-                </video>
-
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/novel_views/novel_views_cow_1.mp4" type="video/mp4" />
-                </video>
-                <video id="v0" width="49%" autoplay loop muted controls>
-                  <source src="videos/novel_views/novel_views_cow_2.mp4" type="video/mp4" />
-                </video>
+        </section>
+        <!-- additional results -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3>
+                            <b>Additional Results</b>
+                        </h3>
+                    </div>
+                </div>
+                <hr style="margin-top:0px">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h4>
+                            <b>Novel Pose and View Synthesis</b>
+                        </h4>
+                        <p>Our network was trained only on individual poses. We apply our rendering pipeline to keypoints from motion captured data from the <a href="https://amass.is.tue.mpg.de/" target="_blank">AMASS dataset</a>.</p>
+                        <video id="v0" width="100%" autoplay loop muted controls>
+                            <source src="videos/human_animation/animation_macarena.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/human_animation/animation_sit.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/human_animation/animation_cross_legged.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/human_animation/animation_walk1.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/human_animation/animation_walk2.mp4" type="video/mp4" />
+                        </video>
+                        <p><br><br>One failure case comes up if the animation is far from the trained poses, as is the case with this crawling animation. There are problems with the mask in occluded areas as well as artifacts towards the edge of the reconstruction region.</p>
+                        <video id="v0" width="100%" autoplay loop muted controls>
+                            <source src="videos/human_animation/animation_crawl_failure.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <br>
+                        <h4>
+                            <b>Latent Space Interpolation</b>
+                        </h4>
+                        <p>Each video shows the linear interpolation between different pose encodings from the test set.</p>
+                        <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/interpolation/interpolation_human.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/interpolation/interpolation_giraffe.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/interpolation/interpolation_pigeon.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/interpolation/interpolation_cow.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <br>
+                        <h4>
+                            <b>View Consistency</b>
+                        </h4>
+                        <p> Each video shows a single pose rendererd from a camera circling around the subjects at different heights.</p>
+                         <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/novel_views/novel_views_human_1.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/novel_views/novel_views_human_2.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/novel_views/novel_views_giraffe_1.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/novel_views/novel_views_giraffe_2.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="33%" autoplay loop muted controls>
+                            <source src="videos/novel_views/novel_views_pigeon_1.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="33%" autoplay loop muted controls>
+                            <source src="videos/novel_views/novel_views_pigeon_2.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="33%" autoplay loop muted controls>
+                            <source src="videos/novel_views/novel_views_pigeon_3.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/novel_views/novel_views_cow_1.mp4" type="video/mp4" />
+                        </video>
+                        <video id="v0" width="49%" autoplay loop muted controls>
+                            <source src="videos/novel_views/novel_views_cow_2.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <br>
+                        <h4>
+                            <b>Real World</b>
+                        </h4>
+                        <p> The animation shows the process of pose optimization from the initalization to the final pose given the silhouette.</p>
+                        <video id="v0" width="100%" autoplay loop muted controls>
+                            <source src="videos/real_world_animation.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
             </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Additional Results: Real World
-                </h3>
-                <p>
-                The animation shows the process of pose optimization from the initalization to the final pose given the silhouette.
-                </p>
-                <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="videos/real_world_animation.mp4" type="video/mp4" />
-                </video>
+        </section>
+        <!-- citation -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3>
+                            <b>Cite us</b>
+                        </h3>
+                    </div>
+                </div>
+                <hr style="margin-top:0px">
+                <div class="row">
+                    <div class="col-md-12">
+                        <pre style="background-color: #e9eeef">
+                            <code>
+    @inproceedings{giewald2022nepu,
+      title={Neural Puppeteer: Keypoint-Based Neural Rendering of Dynamic Shapes},
+      author={Giebenhain, Simon and Waldmann, Urs and Johannsen, Ole and Goldluecke, Bastian},
+      booktitle={Asian Conference on Computer Vision (ACCV)},
+      year={2022}
+      }
+                            </code>
+                        </pre>
+                    </div>
+                </div>
             </div>
-        </div>
-
-
-    </div>
-</body>
+        </section>
+        <!-- footer -->
+        <footer class="text-center" style="margin-bottom:10px">
+            <a href="https://urs-waldmann.github.io/NePu/" target="_blank">NePu</a> is maintained by <a href="https://urs-waldmann.de/computer-vision/" target="_blank">Urs Waldmann</a> and <a href="https://simongiebenhain.github.io/" target="_blank">Simon Giebenhain</a>.
+        </footer>
+    </body>
 </html>
-
