@@ -110,6 +110,27 @@
                 </div>
             </div>
         </section>
+        <!-- video -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <h3 class="col-md-12 text-center">
+                        <b>An Introduction to Neural Puppeteer</b>
+                    </h3>
+                </div>
+                <hr style="margin-top:0px">
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <center>
+                            <iframe width="854" height="480"
+                            src="https://www.youtube.com/embed/n-gFLg3YWAg?autoplay=0&mute=0&controls=1" frameborder="0" allowfullscreen>
+                            </iframe>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- additional results -->
         <section>
             <div class="container">
@@ -127,23 +148,23 @@
                             <b>Novel Pose and View Synthesis</b>
                         </h4>
                         <p>Our network was trained only on individual poses. We apply our rendering pipeline to keypoints from motion captured data from the <a href="https://amass.is.tue.mpg.de/" target="_blank">AMASS dataset</a>.</p>
-                        <video id="v0" width="100%" autoplay loop muted controls>
+                        <video id="animation_macarena" width="100%" autoplay loop muted controls>
                             <source src="videos/human_animation/animation_macarena.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="49%" autoplay loop muted controls>
+                        <video id="animation_sit" width="49%" autoplay loop muted controls>
                             <source src="videos/human_animation/animation_sit.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="49%" autoplay loop muted controls>
+                        <video id="animation_cross_legged" width="49%" autoplay loop muted controls>
                             <source src="videos/human_animation/animation_cross_legged.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="49%" autoplay loop muted controls>
+                        <video id="animation_walk1" width="49%" autoplay loop muted controls>
                             <source src="videos/human_animation/animation_walk1.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="49%" autoplay loop muted controls>
+                        <video id="animation_walk2" width="49%" autoplay loop muted controls>
                             <source src="videos/human_animation/animation_walk2.mp4" type="video/mp4" />
                         </video>
                         <p><br><br>One failure case comes up if the animation is far from the trained poses, as is the case with this crawling animation. There are problems with the mask in occluded areas as well as artifacts towards the edge of the reconstruction region.</p>
-                        <video id="v0" width="100%" autoplay loop muted controls>
+                        <video id="animation_crawl_failure" width="100%" autoplay loop muted controls>
                             <source src="videos/human_animation/animation_crawl_failure.mp4" type="video/mp4" />
                         </video>
                     </div>
@@ -155,16 +176,16 @@
                             <b>Latent Space Interpolation</b>
                         </h4>
                         <p>Each video shows the linear interpolation between different pose encodings from the test set.</p>
-                        <video id="v0" width="49%" autoplay loop muted controls>
+                        <video id="interpolation_human" width="49%" autoplay loop muted controls>
                             <source src="videos/interpolation/interpolation_human.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="49%" autoplay loop muted controls>
+                        <video id="interpolation_giraffe" width="49%" autoplay loop muted controls>
                             <source src="videos/interpolation/interpolation_giraffe.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="49%" autoplay loop muted controls>
+                        <video id="interpolation_pigeon" width="49%" autoplay loop muted controls>
                             <source src="videos/interpolation/interpolation_pigeon.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="49%" autoplay loop muted controls>
+                        <video id="interpolation_cow" width="49%" autoplay loop muted controls>
                             <source src="videos/interpolation/interpolation_cow.mp4" type="video/mp4" />
                         </video>
                     </div>
@@ -176,31 +197,31 @@
                             <b>View Consistency</b>
                         </h4>
                         <p> Each video shows a single pose rendererd from a camera circling around the subjects at different heights.</p>
-                         <video id="v0" width="49%" autoplay loop muted controls>
+                         <video id="novel_views_human_1" width="49%" autoplay loop muted controls>
                             <source src="videos/novel_views/novel_views_human_1.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="49%" autoplay loop muted controls>
+                        <video id="novel_views_human_2" width="49%" autoplay loop muted controls>
                             <source src="videos/novel_views/novel_views_human_2.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="49%" autoplay loop muted controls>
+                        <video id="novel_views_giraffe_1" width="49%" autoplay loop muted controls>
                             <source src="videos/novel_views/novel_views_giraffe_1.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="49%" autoplay loop muted controls>
+                        <video id="novel_views_giraffe_2" width="49%" autoplay loop muted controls>
                             <source src="videos/novel_views/novel_views_giraffe_2.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="33%" autoplay loop muted controls>
+                        <video id="novel_views_pigeon_1" width="33%" autoplay loop muted controls>
                             <source src="videos/novel_views/novel_views_pigeon_1.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="33%" autoplay loop muted controls>
+                        <video id="novel_views_pigeon_2" width="33%" autoplay loop muted controls>
                             <source src="videos/novel_views/novel_views_pigeon_2.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="33%" autoplay loop muted controls>
+                        <video id="novel_views_pigeon_3" width="33%" autoplay loop muted controls>
                             <source src="videos/novel_views/novel_views_pigeon_3.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="49%" autoplay loop muted controls>
+                        <video id="novel_views_cow_1" width="49%" autoplay loop muted controls>
                             <source src="videos/novel_views/novel_views_cow_1.mp4" type="video/mp4" />
                         </video>
-                        <video id="v0" width="49%" autoplay loop muted controls>
+                        <video id="novel_views_cow_2" width="49%" autoplay loop muted controls>
                             <source src="videos/novel_views/novel_views_cow_2.mp4" type="video/mp4" />
                         </video>
                     </div>
@@ -211,9 +232,9 @@
                         <h4>
                             <b>Real World</b>
                         </h4>
-                        <p> The animation shows the process of pose optimization from the initalization to the final pose given the silhouette.</p>
-                        <video id="v0" width="100%" autoplay loop muted controls>
-                            <source src="videos/real_world_animation.mp4" type="video/mp4" />
+                        <p> The animation shows the process of pose optimization from the initialization to the final pose given the silhouette.</p>
+                        <video id="real_world_animation" width="100%" autoplay loop muted controls>
+                            <source src="videos/real_world_animation_final.mp4" type="video/mp4" />
                         </video>
                     </div>
                 </div>
