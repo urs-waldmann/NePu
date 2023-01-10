@@ -1,7 +1,7 @@
 # Neural Puppeteer (NePU)
 Official Code Release for the ACCV'22 paper "Neural Puppeteer: Keypoint-Based Neural Rendering of Dynamic Shapes"
 
-[Project Page](https://urs-waldmann.github.io/NePu/) | [Paper](todo-insert-link) | [Supplementary](todo-insert-link) | [Data](todo-insert-link)
+[Project Page](https://urs-waldmann.github.io/NePu/) | [Paper](https://urs-waldmann.github.io/NePu/docs/nepu_paper.pdf) | [Supplementary](https://urs-waldmann.github.io/NePu/docs/nepu_supp.pdf) | [Data](https://zenodo.org/record/7149178)
 
 TODO teaser GIF
 
@@ -11,7 +11,7 @@ All experiments with NePu were run using CUDA version 11.6 and the official pyto
 
 Alternatively, we provide the `nepu_env.yaml` file that holds all python requirements for this project. To conveniently install them automatically with anaconda you can use:
 ```
-conda env create -f nepu_env.yml
+conda env create -f nepu_env.yaml
 conda activate nepu
 ```
 
