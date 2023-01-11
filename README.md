@@ -18,7 +18,7 @@ conda activate nepu
 
 # Datasets
 
-TODO
+You find our synthetic data sets [here](https://zenodo.org/record/7149178). Download and extract all folders. Copy all four extracted folders to ```./data/```.
 
 # Training
 
@@ -26,7 +26,7 @@ To train NePu please run
 
 ``` python train.py -exp_name EXP_NAME -cfg_file CFG_FILE -data DATA_TYPE```
 
-where the ```CFG_FILE``` is the path to a ```.yaml```-file specifiying the configurations, describes in more detail [here](todo-insert-link-here). ```DATA_TYPE```can be one of the categories of our synthetic dataset, namely ```giraffe, pigeon, cow, human```.
+where the ```CFG_FILE``` is the path to a ```.yaml```-file specifiying the configurations, describes in more detail [here](todo-insert-link-here). ```DATA_TYPE```can be one of the categories of our synthetic dataset, namely ```giraffes, pigeons, cows, humans```.
 
 
 # Rendering
