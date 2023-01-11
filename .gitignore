@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# custom
+.idea/
+experiments/
+data/multiview_cow
+data/multiview_pigeon
+data/multiview_giraffe
+data/multiview_smplx
