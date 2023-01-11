@@ -37,6 +37,7 @@ fname_data_cfg = './configs/data_configs.yaml'
 with open(fname_data_cfg, 'r') as f:
     data_cfg = yaml.safe_load(f)
 
+CFG['data'] = {}
 CFG['data']['nkps'] = data_cfg['nkps'][args.data]
 CFG['data']['ncams'] = data_cfg['ncams'][args.data]
 CFG['data']['radius'] = data_cfg['radii'][args.data]

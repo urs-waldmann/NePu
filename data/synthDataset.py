@@ -27,19 +27,19 @@ class SilhouetteDatasetReal(Dataset):
 
         np.random.seed(0)
 
-        paths = {'pigeons': '/abyss/home/silhouettes/',
-                 'humans': '/abyss/home/silhouettes/',
-                 'cows': '/abyss/home/silhouettes/',
-                 'giraffes': '/abyss/home/silhouettes/'
+        paths = {'pigeons': './data/',
+                 'humans': './data/',
+                 'cows': './data/',
+                 'giraffes': './data/'
                  }
         self.path = paths[type]
         self.batch_size = batch_size
         self.n_supervision_points = n_supervision_points
 
-        paths_kps = {'pigeons': '/abyss/home/silhouettes/synth_data/',
-                     'humans': '/abyss/home/silhouettes/multiview_smplx/male/pose_512/',
-                     'cows': '/abyss/home/silhouettes/multiview_cow/cow_animation_Holstein.blend/',
-                     'giraffes': '/abyss/home/silhouettes/multiview_giraffe/'
+        paths_kps = {'pigeons': './data/multiview_pigeon/2021.11.26 - pigeonanimation 56cams/',
+                     'humans': './data/multiview_smplx/male/pose/',
+                     'cows': './data/multiview_cow/cow_animation_Holstein.blend/',
+                     'giraffes': './data/multiview_giraffe/giraffe_animation.blend/'
                      }
         self.keyPos3d = np.genfromtxt(paths_kps[type] + 'keypoints.csv', delimiter=',')[1:, 1:]
         if type == 'pigeons':
@@ -356,10 +356,10 @@ class SyntheticDataset(Dataset):
         steps = {'train': train_steps, 'val': val_steps, 'test': test_steps}
         self.steps = steps[mode]
 
-        paths = {'pigeons': '/abyss/home/silhouettes/synth_data/',
-                 'humans': '/abyss/home/silhouettes/multiview_smplx/male/pose_512/',
-                 'cows': '/abyss/home/silhouettes/multiview_cow/cow_animation_Holstein.blend/',
-                 'giraffes': '/abyss/home/silhouettes/multiview_giraffe/'
+        paths = {'pigeons': './data/multiview_pigeon/2021.11.26 - pigeonanimation 56cams/',
+                 'humans': './data/multiview_smplx/male/pose/',
+                 'cows': './data/multiview_cow/cow_animation_Holstein.blend/',
+                 'giraffes': './data/multiview_giraffe/giraffe_animation.blend/'
                  }
         self.path = paths[type]
         self.batch_size = batch_size
@@ -646,10 +646,10 @@ class SilhouetteDatasetNovelViews(Dataset):
 
         self.steps = steps[mode]
         print(len(self.steps))
-        paths = {'pigeons': '/abyss/home/silhouettes/synth_data/',
-                 'humans': '/abyss/home/silhouettes/multiview_smplx/male/pose_512/',
-                 'cows': '/abyss/home/silhouettes/multiview_cow/cow_animation_Holstein.blend/',
-                 'giraffes': '/abyss/home/silhouettes/multiview_giraffe/'
+        paths = {'pigeons': './data/multiview_pigeon/2021.11.26 - pigeonanimation 56cams/',
+                 'humans': './data/multiview_smplx/male/pose/',
+                 'cows': './data/multiview_cow/cow_animation_Holstein.blend/',
+                 'giraffes': './data/multiview_giraffe/giraffe_animation.blend/'
                  }
         self.path = paths[type]
         self.batch_size = batch_size

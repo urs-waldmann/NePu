@@ -9,7 +9,6 @@ import torch.nn.functional as functional
 import torch.nn.functional as F
 
 from .geometry import plucker_embedding
-import pointnet2_ops_lib.pointnet2_ops.pointnet2_utils as pointnet2_utils
 
 
 
@@ -372,6 +371,7 @@ class RenderHead(nn.Module):
 
         self.fc_out = nn.Linear(hidden_dim, out_dim)
         self.actvn = F.relu
+        self.n_blocks = n_blocks
 
     def forward(self, y):
         net = self.init_enc(y)
@@ -380,7 +380,7 @@ class RenderHead(nn.Module):
             net = net + self.fc_c[i](y)
             net = self.blocks[i](net)
 
-        return self.fc_out_color(self.actvn(net))
+        return self.fc_out(self.actvn(net))
 
 #TODO resturcture heads
 class NePuRenderer(nn.Module):
