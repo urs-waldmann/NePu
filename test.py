@@ -16,7 +16,7 @@ parser.add_argument('-exp_name', required=True, type=str)
 parser.add_argument('-checkpoint', required=True, type=int)
 parser.add_argument('-data', required=True, type=str)
 parser.add_argument('-res_factor', type=float, default=1.0)
-parser.add_argument('-npixel_per_batch', type=int, default=50000)
+parser.add_argument('-npixels_per_batch', type=int, default=50000)
 parser.add_argument('-view_cfg_path', type=str)
 
 try:
@@ -42,6 +42,7 @@ decoder = get_decoder(CFG)
 renderer = get_renderer(CFG)
 
 CFG['training']['npoints_decoder'] = 10
+CFG['training']['batch_size'] = 1
 #TODO view_cfg_path
 dataset = get_synthetic_dataset(args.data, 'test', 'uniform', CFG, CAMS)
 
@@ -54,7 +55,9 @@ decoder.eval()
 renderer.eval()
 
 #load params
-checkpoint = torch.load(exp_dir + 'checkpoints/checkpoint_epoch_{}.tar'.format(args.checkpoint), map_location=device)
+checkpoint_path = exp_dir + 'checkpoints/checkpoint_epoch_{}.tar'.format(args.checkpoint)
+checkpoint = torch.load(checkpoint_path, map_location=device)
+print('Loaded checkpoint from: {}'.format(checkpoint_path))
 encoder.load_state_dict(checkpoint['encoder_state_dict'])
 if not CFG['renderer']['type'] == 'lfn':
     decoder.load_state_dict(checkpoint['decoder_state_dict'])
@@ -84,8 +87,8 @@ with torch.no_grad():
 
 
         for c_idx in CAMS:
-            xres = gt_depth[c_idx].shape[1] * args.res_factor
-            yres = gt_depth[c_idx].shape[0] * args.res_factor
+            xres = int(gt_depth[c_idx].shape[1] * args.res_factor)
+            yres = int(gt_depth[c_idx].shape[0] * args.res_factor)
             xx, yy = np.meshgrid(np.arange(xres), np.arange(yres))
             if not CFG['renderer']['type'] == 'lfn':
                 xx = xx / xres
