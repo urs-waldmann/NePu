@@ -7,7 +7,7 @@ TODO teaser GIF
 
 # Install
 
-All experiments with NePu were run using CUDA version 11.6 and the official pytorch docker image `nvcr.io/nvidia/pytorch:22.02-py3`, as published by nvidia [here](https://ngc.nvidia.com/catalog/containers/nvidia:pytorch). Additionally, you will need to install the ```imageio```library.
+All experiments with NePu were run using CUDA version 11.6 and the official pytorch docker image `nvcr.io/nvidia/pytorch:22.02-py3`, as published by nvidia [here](https://ngc.nvidia.com/catalog/containers/nvidia:pytorch). Additionally, you will need to install the ```imageio``` library.
 
 Alternatively, we provide the `nepu_env.yaml` file that holds all python requirements for this project. To conveniently install them automatically with anaconda you can use:
 ```
@@ -22,7 +22,7 @@ You find our synthetic data sets [here](https://zenodo.org/record/7149178). Down
 
 # Training
 
-To train NePu, please run 
+To train NePu, please run:
 
 ``` python train.py -exp_name EXP_NAME -cfg_file CFG_FILE -data DATA_TYPE```,
 
@@ -31,16 +31,17 @@ where the ```CFG_FILE``` is the path to a ```.yaml```-file specifiying the confi
 
 # Rendering
 
-To render multiple views of the test set, run 
+To render multiple views of the test set, run:
 
 ``` python test.py -exp_name EXP_NAME -checkpoint CKPT -data DATA_TYPE ```,
 
-where ```CKPT``` specifies the epoch of the trained weights.
+where ```CKPT``` specifies the epoch of the trained weights and the other command line arguments are the same as above.
+
 TODO: custom and novel views
 
 # Inverse-Rendering
 
-For our inverse-rendering-based 3D keypoint detection run
+For our inverse-rendering-based 3D keypoint detection run:
 
 ```
 python sil2kps.py -exp_name EXP_NAME -checkpoint CKPT -cams CAM_IDS -data DATA_TYPE 
