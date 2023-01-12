@@ -22,18 +22,18 @@ You find our synthetic data sets [here](https://zenodo.org/record/7149178). Down
 
 # Training
 
-To train NePu please run 
+To train NePu, please run 
 
-``` python train.py -exp_name EXP_NAME -cfg_file CFG_FILE -data DATA_TYPE```
+``` python train.py -exp_name EXP_NAME -cfg_file CFG_FILE -data DATA_TYPE```,
 
-where the ```CFG_FILE``` is the path to a ```.yaml```-file specifiying the configurations, describes in more detail [here](todo-insert-link-here). ```DATA_TYPE```can be one of the categories of our synthetic dataset, namely ```giraffes, pigeons, cows, humans```.
+where the ```CFG_FILE``` is the path to a ```.yaml```-file specifiying the configurations, described in more detail [here](todo-insert-link-here). ```DATA_TYPE``` can be one of the categories of our synthetic dataset, namely ```giraffes, pigeons, cows, humans```.
 
 
 # Rendering
 
-To render multiple views of the test set run 
+To render multiple views of the test set, run 
 
-``` python test.py -exp_name EXP_NAME -checkpoint CKPT -data DATA_TYPE ```
+``` python test.py -exp_name EXP_NAME -checkpoint CKPT -data DATA_TYPE ```,
 
 where ```CKPT``` specifies the epoch of the trained weights.
 TODO: custom and novel views
