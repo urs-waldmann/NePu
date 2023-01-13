@@ -250,4 +250,4 @@ def test():
     print(rays.shape)
 
 
-test()
+#test()
