@@ -1,0 +1,8 @@
+# custom
+.idea/
+experiments/
+data/multiview_cow
+data/multiview_pigeon
+data/multiview_giraffe
+data/multiview_smplx
+__pycache__
