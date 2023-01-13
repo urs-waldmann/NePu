@@ -9,11 +9,11 @@ encoder:
   kps_bottle: 128
   lat_dim: 1024
   loc_lat_dim: 256
-  nfinal_trans: 3
+  nfinal_trans: 4
   type: nepu
 training:
   L: -1
-  batch_size: 42
+  batch_size: 64
   ckpt: null
   grad_clip: 1.0
   is_ANP: false
