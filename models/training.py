@@ -65,7 +65,7 @@ class Trainer(object):
         self.optimizer.zero_grad()
         loss_mask, loss_kps, loss_depth, loss_color, loss_reg = self.compute_loss(batch)
 
-        loss_tot = loss_mask + loss_kps + loss_reg/32 + loss_depth + loss_color
+        loss_tot = loss_mask + loss_kps + loss_reg + loss_depth + loss_color
         loss_tot.backward()
         if self.cfg['grad_clip'] is not None:
             torch.nn.utils.clip_grad_norm_(self.encoder.parameters(), max_norm=self.cfg['grad_clip'])
@@ -109,7 +109,7 @@ class Trainer(object):
         loss_depth = ((depth - depth_pred)**2).mean()
         loss_color = ((color - color_pred)**2).mean()
 
-        return loss, loss_kps, loss_depth, loss_color, torch.norm(z, dim=-1).mean()
+        return 3 * loss, 2 * loss_kps, loss_depth, loss_color, torch.norm(z, dim=-1).mean()/16
 
 
     def train_model(self, epochs, ckp_interval=5):
@@ -243,7 +243,7 @@ class Trainer(object):
             sum_val_depth += l_depth.item()
             sum_val_color += l_color.item()
             sum_val_reg += l_reg.item()
-            sum_val_loss += l_mask.item() + l_kps.item() + l_depth.item() + l_color.item() + l_reg.item()/32
+            sum_val_loss += l_mask.item() + l_kps.item() + l_depth.item() + l_color.item() + l_reg.item()
             c = c + 1
 
 
