@@ -32,7 +32,7 @@ class Trainer(object):
                                                 list(decoder.parameters()) +
                                                 list(decoder_impl.parameters()),
                                          lr=self.cfg['lr'],
-                                         weight_decay=0.001)
+                                         weight_decay=0.005)
         self.lr = self.cfg['lr']
 
         self.train_dataset = train_dataset
