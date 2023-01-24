@@ -1,4 +1,4 @@
-# Neural Puppeteer (NePU)
+# Neural Puppeteer (NePu)
 Official Code Release for the ACCV'22 paper "Neural Puppeteer: Keypoint-Based Neural Rendering of Dynamic Shapes"
 
 [Project Page](https://urs-waldmann.github.io/NePu/) | [Paper](https://urs-waldmann.github.io/NePu/docs/nepu_paper.pdf) | [Supplementary](https://urs-waldmann.github.io/NePu/docs/nepu_supp.pdf) | [Data](https://zenodo.org/record/7149178)
