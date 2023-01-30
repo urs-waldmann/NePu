@@ -25,6 +25,7 @@ class Trainer(object):
         self.decoder_impl = decoder_impl.to(device)
         print('Number of Parameters in encoder: {}'.format(count_parameters(self.encoder)))
         print('Number of Parameters in decoder: {}'.format(count_parameters(self.decoder)))
+        print('Number of Parameters in renderer: {}'.format(count_parameters(self.decoder_impl)))
         self.cfg = cfg
         self.device = device
         if optimizer == 'Adam':
