@@ -28,7 +28,7 @@ To train NePu, please run:
 
 ``` python train.py -exp_name EXP_NAME -cfg_file CFG_FILE -data DATA_TYPE```,
 
-where the ```CFG_FILE``` is the path to a ```.yaml```-file specifiying the configurations, described in more detail [here](todo-insert-link-here). ```DATA_TYPE``` can be one of the categories of our synthetic dataset, namely ```giraffes, pigeons, cows, humans```.
+where the ```CFG_FILE``` is the path to a ```.yaml```-file specifiying the configurations, like this one [here](./configs/nepu.yaml). ```DATA_TYPE``` can be one of the categories of our synthetic dataset, namely ```giraffes, pigeons, cows, humans```.
 
 
 # Rendering
@@ -39,7 +39,7 @@ To render multiple views of the test set, run:
 
 where ```CKPT``` specifies the epoch of the trained weights and the other command line arguments are the same as above.
 
-TODO: custom and novel views
+TODO: novel views
 
 # Inverse-Rendering
 
