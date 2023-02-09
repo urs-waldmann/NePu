@@ -42,6 +42,9 @@ CFG['data']['nkps'] = data_cfg['nkps'][args.data]
 CFG['data']['ncams'] = data_cfg['ncams'][args.data]
 CFG['data']['radius'] = data_cfg['radii'][args.data]
 CFG['data']['num_datapoints'] = data_cfg['num_datapoints'][args.data]
+CFG['data']['noise_aug_kpts'] = data_cfg['keypoint_noise_augmentation'][args.data]
+CFG['data']['std_near'] = data_cfg['boundary_sigma_near'][args.data]
+CFG['data']['std_far'] = data_cfg['boundary_sigma_far'][args.data]
 
 exp_dir = './experiments/{}/'.format(args.exp_name)
 fname = exp_dir + 'configs.yaml'

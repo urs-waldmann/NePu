@@ -298,7 +298,7 @@ class SilhouetteDatasetReal(Dataset):
 
 class SyntheticDataset(Dataset):
     def __init__(self, type, mode, n_supervision_points, supervision_distr, batch_size,
-                 nkps, num_datapoints, radius, ncams,
+                 nkps, num_datapoints, radius, ncams, std_near, std_far,
                  cams=None, normalize_pixel_coords=True, noise_aug=None, cam_aug=True):
 
         self.type = type
@@ -308,6 +308,8 @@ class SyntheticDataset(Dataset):
 
         self.noise_aug = noise_aug
         self.cam_aug = cam_aug
+        self.std_near = std_near
+        self.std_far = std_far
 
         N = num_datapoints
         self.N = N
@@ -532,8 +534,8 @@ class SyntheticDataset(Dataset):
                 filtered = convolve2d(mask.astype(np.int32), np.ones([3, 3], dtype=np.int32), mode='same')
                 interesting_bool = np.logical_not(np.logical_or(filtered == 0, filtered == 255*9))
                 interesting_pos = np.where(interesting_bool)
-                sup_gt_far, sup_pos_far = self.sample_points_concentrated(n_far, interesting_pos, mask, 0.15)#0.075)
-                sup_gt_near, sup_pos_near = self.sample_points_concentrated(n_near, interesting_pos, mask, 0.015)#0.0075)
+                sup_gt_far, sup_pos_far = self.sample_points_concentrated(n_far, interesting_pos, mask, self.std_far)
+                sup_gt_near, sup_pos_near = self.sample_points_concentrated(n_near, interesting_pos, mask, self.std_near)
                 sup_pos_ = np.concatenate([sup_pos_near, sup_pos_far], axis=0)
                 sup_gt_ = np.concatenate([sup_gt_near, sup_gt_far], axis=0)
                 #TODO add parameters for n_sup_points for color and depth!
@@ -859,18 +861,20 @@ class SilhouetteDatasetNovelViews(Dataset):
 
 #TODO finish up final params!!
 def get_synthetic_dataset(data_type, mode, sup_distr, cfg, cams=None):
-    return SyntheticDataset(data_type,
-                            mode,
-                            cfg['training']['npoints_decoder'],
-                            sup_distr,
-                            cfg['training']['batch_size'],
+    return SyntheticDataset(type=data_type,
+                            mode=mode,
+                            n_supervision_points=cfg['training']['npoints_decoder'],
+                            supervision_distr=sup_distr,
+                            batch_size=cfg['training']['batch_size'],
                             nkps=cfg['data']['nkps'],
                             num_datapoints=cfg['data']['num_datapoints'],
                             radius=cfg['data']['radius'],
                             ncams=cfg['data']['ncams'],
                             cams=cams,
                             normalize_pixel_coords=True,
-                            noise_aug=0.003,
-                            cam_aug=True
+                            noise_aug=cfg['data']['noise_aug_kpts'],
+                            cam_aug=True,
+                            std_near=cfg['data']['std_near'],
+                            std_far=cfg['data']['std_far']
                             )
 

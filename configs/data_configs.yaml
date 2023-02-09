@@ -18,3 +18,18 @@ num_datapoints:
   cows: 910
   giraffes: 1900
   humans: 3213
+keypoint_noise_augmentation:
+  humans: 0.001
+  pigeons: 0.0005
+  cows: 0.003
+  giraffes: 0.003
+boundary_sigma_near:
+  humans: 0.05
+  pigeons: 0.015
+  cows: 0.0125
+  giraffes: 0.015
+boundary_sigma_far:
+  humans: 0.175
+  pigeons: 0.15
+  cows: 0.125
+  giraffes: 0.15
