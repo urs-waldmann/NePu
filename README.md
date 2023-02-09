@@ -3,7 +3,9 @@ Official Code Release for the ACCV'22 paper "Neural Puppeteer: Keypoint-Based Ne
 
 [Project Page](https://urs-waldmann.github.io/NePu/) | [Paper](https://urs-waldmann.github.io/NePu/docs/nepu_paper.pdf) | [Supplementary](https://urs-waldmann.github.io/NePu/docs/nepu_supp.pdf) | [Data](https://zenodo.org/record/7149178)
 
-TODO teaser GIF
+**Abstract**
+
+We introduce Neural Puppeteer, an efficient neural rendering pipeline for articulated shapes. By inverse rendering, we can predict 3D keypoints from multi-view 2D silhouettes alone, without requiring texture information. Furthermore, we can easily predict 3D keypoints of the same class of shapes with one and the same trained model and generalize more easily from training with synthetic data which we demonstrate by successfully applying zero-shot synthetic to real-world experiments. We demonstrate the flexibility of our method by fitting models to synthetic videos of different animals and a human, and achieve quantitative results which outperform our baselines. Our method uses 3D keypoints in conjunction with individual local feature vectors and a global latent code to allow for an efficient representation of time-varying and articulated shapes such as humans and animals. In contrast to previous work, we do not perform reconstruction in the 3D domain, but project the 3D features into 2D cameras and perform reconstruction of 2D RGB-D images from these projected features, which is significantly faster than volumetric rendering. Our synthetic dataset will be publicly available, to further develop the evolving field of animal pose and shape reconstruction. 
 
 # Install
 
