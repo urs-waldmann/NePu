@@ -79,7 +79,7 @@ renderer.load_state_dict(checkpoint['decoder_impl_state_dict'])
 cluster_centers = np.load('experiments/{}/cluster_centers_{}.npy'.format(args.exp_name, args.checkpoint))
 print(cluster_centers.shape)
 
-angles = [0, 60, 120, 180, 240, 300] # [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330] #, 120, 240]
+angles = [0, 90, 180, 270]
 
 data = dataset.__getitem__(0)
 inp_feats = data.get('input_feats').to(device).unsqueeze(0)
@@ -189,7 +189,7 @@ for ind in range(0, len(dataset)):
 
         best_loss = 100.0
         best_state = None
-        for i in range(5):
+        for i in range(10):
             opt.step(closure)
 
             with torch.no_grad():
