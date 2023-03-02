@@ -67,6 +67,7 @@ title={Neural Puppeteer: Keypoint-Based Neural Rendering of Dynamic Shapes},
 author={Giebenhain, Simon and Waldmann, Urs and Johannsen, Ole and Goldluecke, Bastian},
 booktitle={Asian Conference on Computer Vision (ACCV)},
 year={2022},
+pages={239--256}
 }
 ```
 
