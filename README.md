@@ -1,3 +1,7 @@
+## News
+
+**2023/12/18** We disentangle geometry and texture in Neural Texture Puppeteer and show that neural rendering enables re-identification at interactive speed. [[arXiv](https://arxiv.org/abs/2311.17109), [code](https://github.com/urs-waldmann/NeTePu)]
+
 # Neural Puppeteer (NePu)
 Official Code Release for the ACCV'22 paper "Neural Puppeteer: Keypoint-Based Neural Rendering of Dynamic Shapes"
 
