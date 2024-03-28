@@ -67,11 +67,12 @@ For questions, comments and to discuss ideas please contact ```{Urs Waldmann, Si
 
 ```
 @inproceedings{giewald2022nepu,
-title={Neural Puppeteer: Keypoint-Based Neural Rendering of Dynamic Shapes},
-author={Giebenhain, Simon and Waldmann, Urs and Johannsen, Ole and Goldluecke, Bastian},
-booktitle={Asian Conference on Computer Vision (ACCV)},
-year={2022},
-pages={239--256}
+  author={Giebenhain, Simon and Waldmann, Urs and Johannsen, Ole and Goldluecke, Bastian},
+  title={Neural Puppeteer: Keypoint-Based Neural Rendering of Dynamic Shapes},
+  booktitle={Proceedings of the Asian Conference on Computer Vision (ACCV)},
+  month={December},
+  year={2022},
+  pages={2830-2847}
 }
 ```
 
