@@ -135,3 +135,5 @@ data/multiview_cow
 data/multiview_pigeon
 data/multiview_giraffe
 data/multiview_smplx
+run.sh
+.svnignore
