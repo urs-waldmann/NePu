@@ -57,7 +57,7 @@ where ```CAM_IDS``` spcifies the views used for 3D keypoint detection and the ot
 
 # Pretrained Models
 
-TODO
+You find our pretrained models [here](https://drive.google.com/drive/folders/1htzPilUnmvnNQYv1sE_BxIn-qnL60Fq0?usp=drive_link). Download and copy them to ```./experiments/EXP_NAME/checkpoints/```.
 
 # Contact
 
@@ -75,7 +75,3 @@ For questions, comments and to discuss ideas please contact ```{Urs Waldmann, Si
   pages={2830-2847}
 }
 ```
-
-# Acknowledgment
-
-# License
